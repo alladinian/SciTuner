@@ -19,12 +19,12 @@ class FretsAlertController: UIAlertController {
     override func viewDidLoad() {
         Fret.allFrets.forEach { self.add(fret: $0) }
         
-        addAction(UIAlertAction(title: "cancel".localized(), style: UIAlertActionStyle.cancel, handler: nil))
+        addAction(UIAlertAction(title: "cancel".localized(), style: .cancel, handler: nil))
     }
     
     func add(fret: Fret){
         let action = UIAlertAction(
-            title: fret.localized(), style: UIAlertActionStyle.default,
+            title: fret.localized(), style: .default,
             handler: {(action: UIAlertAction) -> Void in
                 self.parentDelegate?.didChange(fret: fret)
         })

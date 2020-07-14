@@ -65,14 +65,14 @@ class Microphone: NSObject{
         }
         
         do {
-            try session.setCategory(AVAudioSessionCategoryRecord)
+            try session.setCategory(.record)
         } catch let error as NSError {
             err = error
             NSLog("It can't set category, because %@ ", err!)
         }
         
         do {
-            try session.setMode(AVAudioSessionModeMeasurement)
+            try session.setMode(.measurement)
         } catch let error as NSError {
             err = error
             NSLog("It can't set mode, because %@ ", err!)

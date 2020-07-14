@@ -19,12 +19,12 @@ class FiltersAlertController: UIAlertController {
     override func viewDidLoad() {
         Filter.allFilters.forEach { self.add(filter: $0) }
         
-        addAction(UIAlertAction(title: "cancel".localized(), style: UIAlertActionStyle.cancel, handler: nil))
+        addAction(UIAlertAction(title: "cancel".localized(), style: .cancel, handler: nil))
     }
     
     func add(filter: Filter){
         let action = UIAlertAction(
-            title: filter.localized(), style: UIAlertActionStyle.default,
+            title: filter.localized(), style: .default,
             handler: {(action: UIAlertAction) -> Void in
                 self.parentDelegate?.didChange(filter: filter)
         })

@@ -19,12 +19,12 @@ class InstrumentsAlertController: UIAlertController {
     override func viewDidLoad() {
         Instrument.all.forEach { self.add(instrument: $0) }
         
-        addAction(UIAlertAction(title: "cancel".localized(), style: UIAlertActionStyle.cancel, handler: nil))
+        addAction(UIAlertAction(title: "cancel".localized(), style: .cancel, handler: nil))
     }
     
     func add(instrument: Instrument){
         let action = UIAlertAction(
-            title: instrument.localized(), style: UIAlertActionStyle.default,
+            title: instrument.localized(), style: .default,
             handler: {(action: UIAlertAction) -> Void in
                 self.parentDelegate?.didChange(instrument: instrument)
         })

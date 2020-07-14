@@ -77,13 +77,13 @@ class TunerViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: tuner.instrument.localized(),
-            style: UIBarButtonItemStyle.plain,
+            style: .plain,
             target: self,
             action: #selector(Self.showInstrumentsAlertController))
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "settings".localized(),
-            style: UIBarButtonItemStyle.plain,
+            style: .plain,
             target: self,
             action: #selector(Self.showSettingsViewController))
     }
@@ -136,19 +136,19 @@ class TunerViewController: UIViewController {
         tuningView.tuning = tuner.tuning
     }
     
-    func showSettingsViewController() {
+    @objc func showSettingsViewController() {
         navigationController?.pushViewController(settingsViewController, animated: true)
     }
     
-    func showInstrumentsAlertController() {
+    @objc func showInstrumentsAlertController() {
         present(instrumentsAlertController, animated: true, completion: nil)
     }
     
-    func showFrets() {
+    @objc func showFrets() {
         present(fretsAlertController, animated: true, completion: nil)
     }
     
-    func showFilters() {
+    @objc func showFilters() {
         present(filtersAlertController, animated: true, completion: nil)
     }
     

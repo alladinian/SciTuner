@@ -17,14 +17,14 @@ class ModebarView: UIView {
         didSet{
             if fret == .openStrings {
                 fretMode.backgroundColor = .clear
-                fretMode.setTitleColor(.white, for: UIControlState())
-                fretMode.setTitle("tune on fret", for: UIControlState())
+                fretMode.setTitleColor(.white, for: [])
+                fretMode.setTitle("tune on fret", for: [])
                 return
             }
             
             fretMode.backgroundColor = Style.highlighted0
-            fretMode.setTitleColor(.white, for: UIControlState())
-            fretMode.setTitle(fret.localized(), for: UIControlState())
+            fretMode.setTitleColor(.white, for: [])
+            fretMode.setTitle(fret.localized(), for: [])
         }
     }
     
@@ -32,13 +32,13 @@ class ModebarView: UIView {
         didSet{
             if filter == .on {
                 filterMode.backgroundColor = .clear
-                filterMode.setTitleColor(.white, for: UIControlState())
+                filterMode.setTitleColor(.white, for: [])
             } else {
                 filterMode.backgroundColor = Style.highlighted1
-                filterMode.setTitleColor(.white, for: UIControlState())
+                filterMode.setTitleColor(.white, for: [])
             }
             
-            filterMode.setTitle("filter".localized() + ": " + filter.localized(), for: UIControlState())
+            filterMode.setTitle("filter".localized() + ": " + filter.localized(), for: [])
         }
     }
     

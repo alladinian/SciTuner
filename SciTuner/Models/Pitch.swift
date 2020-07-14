@@ -28,7 +28,7 @@ enum Pitch: String {
     }
     
     func index() -> Int? {
-        return Self.allPitches.index(of: self)
+        return Self.allPitches.firstIndex(of: self)
     }
     
     func frequency(of note: Note) -> Double {

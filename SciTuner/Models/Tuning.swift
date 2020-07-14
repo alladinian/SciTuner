@@ -22,7 +22,7 @@ struct Tuning: Equatable {
     init(_ id: String, _ strings: String) {
         self.id = id
         
-        let splitStrings: [String] = strings.characters.split {$0 == " "}.map { String($0) }
+        let splitStrings: [String] = strings.split { $0 == " " }.map { String($0) }
         
         self.description = splitStrings.map({(note: String) -> String in
             note.replacingOccurrences(of: "#", with: "♯")
@@ -48,7 +48,7 @@ struct Tuning: Equatable {
     }
     
     func index(instrument: Instrument) -> Int? {
-        return instrument.tunings().index(of: self)
+        return instrument.tunings().firstIndex(of: self)
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {

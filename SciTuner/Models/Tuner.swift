@@ -117,7 +117,7 @@ class Tuner {
 
         let name = sortedStrings[index]
 
-        let realIndex: Int? = strings.index(of: name)
+        let realIndex: Int? = strings.firstIndex(of: name)
 
         if realIndex == nil{
             return pos

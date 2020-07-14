@@ -63,7 +63,7 @@ typedef struct{
 
 void source_generate(double* dest, size_t count, double* t, double dt, double freq);
 
-Processing* processing_create();
+Processing* processing_create(void);
 void processing_destroy(Processing* p);
 
 void processing_init(Processing* processing, double fd, size_t pointCount, size_t points, size_t previewLength);

@@ -80,7 +80,7 @@ class HarmonicDetector {
             return nil
         }
         
-        guard let json = try? JSONSerialization.jsonObject(with: data) as! [String: [Double]] else {
+        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: [Double]] else {
             return nil
         }
         

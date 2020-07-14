@@ -20,7 +20,7 @@ class ViewController: UINavigationController {
         
         UINavigationBar.appearance().tintColor = Style.text
         UINavigationBar.appearance().barTintColor = Style.background
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: Style.text]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Style.text]
     }
 
     override func didReceiveMemoryWarning() {
